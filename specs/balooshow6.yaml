@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://carapace.sh/schemas/command.json
+
+name: balooshow6
+flags:
+  -x: Print internal info
+  -i: Arguments are interpreted as inode numbers (requires -d)
+  -d=: Device id for the files
+  -h, --help: Displays help on commandline options.
+  --help-all: Displays help, including generic Qt options.
+
+completion:
+  positionalany: ["$files"]
