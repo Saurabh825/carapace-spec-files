@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=https://carapace.sh/schemas/command.json
+
+name: baloosearch6
+flags:
+  -l, --limit=: The maximum number of results
+  -o, --offset=: Offset from which to start the search
+  -t, --type=: Type of data to be searched
+  -d, --directory=: Limit search to specified directory
+  -i, --id: Show document IDs
+  -s, --sort=: Sorting criteria
+  -h, --help: Displays help on commandline options.
+  --help-all: Displays help, including generic Qt options.
+  -v, --version: Displays version information.
+
+completion:
+  flag:
+    directory: ["$directories"]
+    sort: ["auto", "time", "none"]
+    type:
+      [
+        "archive",
+        "folder",
+        "audio",
+        "video",
+        "image",
+        "document",
+        "spreadsheet",
+        "presentation",
+        "text",
+      ]
