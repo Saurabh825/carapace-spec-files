@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://carapace.sh/schemas/command.json
+
+name: archlinux-java
+commands:
+  - name: status
+    description: List installed Java environments and enabled one
+
+  - name: get
+    description: Return the short name of the Java environment set as default
+
+  - name: set
+    description: Force <JAVA_ENV> as default
+    completion:
+      positional:
+        - [$(archlinux-java status | grep -o 'java-\S*')]
+
+  - name: unset
+    description: Unset current default Java environment
+
+  - name: fix
+    description: Fix an invalid/broken default Java environment configuration
